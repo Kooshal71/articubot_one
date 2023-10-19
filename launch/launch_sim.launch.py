@@ -53,7 +53,7 @@ def generate_launch_description():
                         output='screen')
 
 
-    '''
+
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner.py",
@@ -65,7 +65,7 @@ def generate_launch_description():
         executable="spawner.py",
         arguments=["joint_broad"],
     )
-    '''
+    
 
     # Code for delaying a node (I haven't tested how effective it is)
     # 
@@ -92,6 +92,6 @@ def generate_launch_description():
         spawn_entity,
         # joystick,
         # twist_mux,
-        #diff_drive_spawner,
-        #joint_broad_spawner
+        diff_drive_spawner,
+        joint_broad_spawner
     ])
